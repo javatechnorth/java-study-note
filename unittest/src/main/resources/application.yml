@@ -1,0 +1,23 @@
+spring:
+#  aop:
+#    proxy-target-class: true
+  h2:
+    console:
+      enabled: true
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: sa
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+
+server:
+  tomcat:
+    accept-count: 500
+    max-connections: 1000
+    threads:
+      max: 200
+      min-spare: 10
+  port: 3000
+#net.core.somaxconn : 128
