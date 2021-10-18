@@ -24,10 +24,11 @@ public class ThreadSignalingLockSupport {
                 System.out.print(i);
                 i++;
                 LockSupport.unpark(threadA);
+
             }
         });
-        threadA.start();
         threadB.start();
+        threadA.start();
     }
 }
 
