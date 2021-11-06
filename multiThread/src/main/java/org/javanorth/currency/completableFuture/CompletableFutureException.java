@@ -128,7 +128,7 @@ public class CompletableFutureException {
 //        System.out.println("handle.join(); ： " + handle.join());
 
         CompletionStage<Object> test_exception = CompletableFuture.failedStage(new RuntimeException("test exception"));
-        CompletableFuture<Object> test_exception1 = CompletableFuture.failedFuture(new RuntimeException("test exception"));
+        CompletableFuture.failedFuture(new RuntimeException("test exception"));
 
 //        stringCompletableFuture.fa
         try {
