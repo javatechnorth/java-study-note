@@ -1,0 +1,16 @@
+.center_div {
+    border: 1px solid #404e94;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #d0e2f6;
+    text-align: left;
+    padding: 8px;
+}
+table {
+    width: 68%;
+    border: 1px solid black;
+}
+th, td {
+    border: 1px solid black;
+}
+body,html,input{font-family:"msyh";}
