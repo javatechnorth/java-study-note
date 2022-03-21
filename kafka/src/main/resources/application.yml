@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: shop-server
+  cloud:
+    stream:
+      bindings:
+        #配置自己定义的通道与哪个中间件交互
+        input: #ShopChannel里Input和Output的值
+          destination: test #目标主题
+        output:
+          destination: test1
+      default-binder: kafka #默认的binder是kafka
+  kafka:
+    binder:
+      zk-nodes: localhost:2181
+    bootstrap-servers: localhost:9092 #kafka服务地址
+    consumer:
+      group-id: consumer1
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+      client-id: producer1
+server:
+  port: 8100
