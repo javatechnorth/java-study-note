@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: shop-server
+
+
+server:
+  port: 8100
