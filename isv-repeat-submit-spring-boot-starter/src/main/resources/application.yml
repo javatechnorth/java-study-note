@@ -1,0 +1,20 @@
+spring:
+  data:
+    redis:
+      host: 127.0.0.1 # Redis 服务器主机名
+      port: 6379 # Redis 服务器端口号
+#      password:  # Redis 认证密码
+#      ssl: # 开启 SSL（默认为 false）
+#      timeout: # 连接超时时间（单位：毫秒，默认值：2000ms）
+#      lettuce:
+#        pool:
+#          max-active: 5 # 最多同时从池中获取 n 个连接
+#          max-idle: 3 # 空闲状态下保持 n 个连接
+#          min-idle: 5 # 最少保持 n 个连接
+#          max-wait: 3000 # 最长等待 ms 毫秒后仍未获取到连接，则抛出异常
+#          time-between-eviction-runs: 50 # 表示两次空闲检测之间停留时间的下限（单位：毫秒）
+#          block-when-exhausted: false # 当池内连接耗尽时是否阻塞等待，true：阻塞等待；false：直接抛出异常
+#          evictor:
+#            enabled: # 是否开启空闲连接监测线程（默认为 true）
+#            delay: # 开始进行快照的延迟时间 (毫秒)
+#            period: # 快照的周期时间 (毫秒)
