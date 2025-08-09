@@ -1,1 +1,12 @@
 
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: test
+          uri: https://www.javanorth.cn/
+          filters:
+            - RewritePath=/api/javanorth/(?<segment>.*), /${segment}
+          predicates:
+            - Path=/api/javanorth/**
+

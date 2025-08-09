@@ -8,29 +8,18 @@ import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.wuhua.repeatsubmmit.common.interceptor.RepeatSubmitInterceptor;
 
+import java.util.concurrent.CompletableFuture;
+
 @Configuration
 public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
-//    private RedisProperties redisProperties;
-//    public RedisTemplateConfig(RedisProperties redisProperties) {
-//        this.redisProperties = redisProperties;
-//    }
-
-
-
-//    public WebConfig(RedisConnectionFactory redisConnectionFactory, RedisProperties redisProperties) {
-//        this.redisConnectionFactory = redisConnectionFactory;
-//        this.redisProperties = redisProperties;
-//    }
-
-
-
     @Bean
     public RepeatSubmitInterceptor repeatSubmitInterceptor() {
 //        RedisTemplate<String, String> redisTemplate = redisTemplate();
+        CompletableFuture.supplyAsync(()->{ return "hello word";});
         boolean useRequestMD5 = true; // 使用请求体的 MD5 值作为 key
         return new RepeatSubmitInterceptor(redisTemplate, useRequestMD5);
     }

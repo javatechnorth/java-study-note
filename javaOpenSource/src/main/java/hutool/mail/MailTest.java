@@ -18,7 +18,7 @@ public class MailTest {
         account.setHost("smtp.yeah.net");
         account.setPort(25);
         account.setAuth(true);
-        account.setFrom("javaNorth@yeah.net");
+        account.setFrom("java   ");
         account.setUser("javaNorth");
         account.setPass("DJQVCVALOVZMRGPF");
 

@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Created-By: javaNorth
+Agent-Class: com.javanorth.agent.JavaNorthAgent
+Can-Redefine-Classes: true
+Can-Retransform-Classes: true
+Premain-Class: com.javanorth.agent.JavaNorthAgent
